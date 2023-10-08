@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. 環境
 
-Things you may want to cover:
+- ruby-3.2.2
+- rails (7.0.6)
+- postgres 12.0
 
-* Ruby version
+## 2. 環境構築手順
 
-* System dependencies
+### 2.1. リポジトリのクローン
 
-* Configuration
+```zsh
+  git clone git@github.com:rocky-engineer7/rails-docker.git
+  cd rails-docker
+```
 
-* Database creation
+### 2.2 docker-compose
 
-* Database initialization
+```
+  docker-compose build
+```
 
-* How to run the test suite
+```
+  docker-compose run web rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+  docker-compose up
+```
 
-* Deployment instructions
+http://localhost:3000/ にアクセス
 
-* ...
+上記のコマンドを上から順番に実行していただくと、http://localhost:3000/で Tasks が表示されます。
